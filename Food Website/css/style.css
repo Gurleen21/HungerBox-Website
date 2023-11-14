@@ -1,0 +1,287 @@
+/* CSS Reset */
+*
+{
+    margin: 0;
+    padding: 0;
+} 
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables (optional but recommended)*/
+/* navbar wagera ki height variable mein store krlo and uske according aap margin padding and all dedo */
+:root{
+    --navbar-height:59px;
+}
+
+/* Navigation Bar */
+#navbar
+{
+    display:flex;
+    align-items: center;
+    /* justify-content: center;  Isse saara horizontally center hoga but that not needed */
+    /* height: 100px; */
+    /* position: relative; */
+    position: sticky;
+    /* position: absolute; */
+    /* top:0; */
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* Navigation Bar:Logo and Img */
+#logo
+{
+    margin: 3px 6px;
+}
+#logo img
+{
+    height:60px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar:List Styling */
+
+#navbar::before
+{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+#navbar ul
+{
+    display: flex;
+    
+}
+#navbar ul li
+{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* a mein do padding bcz agar li mein doge tab padding pe hover krne par effect nhi aayga but a par krne se kahi bhi hover tab effect aayega */
+#navbar ul li a
+{
+    /* display: block; */
+    padding:12px 23px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: white;
+}
+
+#navbar ul li a:hover   
+/* a:hover without space */
+{
+    background-color:white;
+    color:black;
+}
+
+/* Home Section */
+#home
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 100px;
+    margin:20px;
+    /* margin-bottom: 60px; */
+    align-items: center;
+    justify-content: center;
+    height:520px;
+}
+#home::before
+{
+    content: "";
+    background: url(../img/spaghetti-ge445e2461_1920.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* height: 600px; */
+    /* % se view mein problem aati hai so can use pixel */
+    top: 0;
+    left: 0;
+    /* top and left se image theek rehti hai(height change krne par bhi home ki) */
+    z-index: -2;
+    opacity: 0.89;
+}
+
+#home h1
+{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p
+{
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+
+/* #services-container
+{
+    margin-top: 1px;
+} */
+#services
+{
+    display: flex;
+    margin: 3px 30px;
+    
+}
+#services .box
+{
+    border: 3px solid brown;
+    padding: 25px;
+    margin: 5px 15px;
+    border-radius: 28px;
+    background-color: rgb(205, 191, 191);
+}
+#services .box img
+{
+    height: 180px;
+    display: block;
+    margin: auto;
+    width: 250px;
+}
+#services .box p
+{
+    font-family: 'Bree Serif', serif;
+}
+/* display:block and height or width mein se kuch set kro for margin:auto */
+
+/* Client Section */
+#client-section
+{
+    position: relative;
+    margin-top: 40px;
+    /* height: 350px; manually adjust kre (responsiveness)*/
+    /* position: relative; */
+    margin-bottom: 80px;
+}
+#client-section::before
+{
+    content: "";
+    background:url(../img/clients1.jpeg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    z-index: -3;
+    opacity: 0.5;
+}
+#clients
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 0px; */
+}
+
+#clients img
+{
+    /* height: 130px; */
+    height: auto;
+    width: 130px;
+    /* padding: 12px; */
+    /* filter:invert(20%); */
+    border-radius: 30px;
+}
+.client-items
+{
+    padding: 15px;
+}
+
+/* Contact Us Section*/
+#contact-us
+{
+    /* height: 400px; */
+    position: relative;
+    /* margin-top: 0px; */
+}
+#contact-us::before
+{
+    content: "";
+    background: url('../img/contact.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+/* form tag not used bcz maybe possible that form ko mein nav mein use kru searck krke submit krte time */
+
+#contact-box
+{
+    
+    /* margin-top: 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+#contact-box form
+{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+#contact-box input,#contact-box textarea
+{
+    width: 100%;
+    padding: 7px;
+    /* padding: 0.4rem; */
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+footer
+{
+    background-color: black;
+    color: white;
+    /* height: 30px; agar bda krna ho*/
+    height: 30px;
+    /* padding: 9px 20px; agar aap chahte ho ki aur text hoga toh padding left right se toh krdi hai and text center tph already krdiya hai*/
+}
+/* Utility Class (maintainability added in code)(reuse kr skte similar headings and all ko by just adding the class)*/
+.h-primary
+{
+    font-size: 2.6rem;
+    padding: 10px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary
+{
+    font-size: 2.0rem;
+    padding:10px;
+    font-family: 'Bree Serif', serif;
+}
+.btn
+{
+    background-color: rgb(72, 16, 16);
+    border: 2px solid white;
+    color: white;
+    margin: 17px;
+    padding: 5px 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center
+{
+    text-align: center;
+}

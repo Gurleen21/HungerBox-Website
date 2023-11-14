@@ -1,0 +1,100 @@
+/* will demostrate that how my website looks in phone display */
+
+/* body
+{
+    background-color: black;
+} */
+
+/* Navigation */
+#navbar
+{
+    flex-direction: column;
+}
+#navbar ul li a
+{
+    padding: 5px 8px;
+    /* padding: 0px 8px; */
+    /* padding-bottom: 8px; */
+}
+/* Home Section*/
+#home
+{
+    height: 500px;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+}
+#home::before
+{
+    height: 700px;
+}
+#home p{
+    font-size: 13px;
+}
+/* Services Section*/
+#services-container
+{
+    margin-top: 50px;
+}
+#services
+{
+    /* margin-top:40px; */
+    flex-direction: column;
+    margin: 12px;
+}
+#services .box
+{
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 25px;
+    margin-bottom: 7px;
+}
+#services .box img
+{
+    /* height: 120px; */
+    height: auto;
+    display: block;
+    margin: auto;
+    width: 120px;
+}
+
+/* Client section */
+#clients
+{
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+
+}
+#clients img
+{
+    width: 90px;
+    height: 90px;
+    padding:2px 5px;
+}
+#client-section
+{
+    margin-top: 40px;
+    /* height: 350px; manually adjust kre (responsiveness)*/
+    /* position: relative; */
+    margin-bottom: 60px;
+}
+
+/* Contact Section*/
+#contact-box form
+{
+    width: 70%;
+}
+/* footer */
+footer
+{
+    bottom: 0px;
+}
+/* Utility classes */
+.h-primary
+{
+  font-size: 25px;
+}
+.btn
+{
+    font-size: 12px;
+    padding:3px 8px;
+}
